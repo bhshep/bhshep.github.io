@@ -1,6 +1,10 @@
 <?php
 $errorMSG = "";
 
+error_reporting(-1);
+ini_set('display_errors', 'On');
+set_error_handler("var_dump");
+
 if (empty($_POST["name"])) {
     $errorMSG = "Name is required ";
 } else {
@@ -26,7 +30,7 @@ if (empty($_POST["terms"])) {
 }
 
 $EmailTo = "bhshep@telkomsa.net";
-$Subject = "New message from Leno landing page";
+$Subject = "Stock-Sale Calculator";
 
 // prepare email body text
 $Body = "";
