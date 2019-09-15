@@ -1,10 +1,6 @@
 <?php
 $errorMSG = "";
 
-error_reporting(-1);
-ini_set('display_errors', 'On');
-set_error_handler("var_dump");
-
 if (empty($_POST["name"])) {
     $errorMSG = "Name is required ";
 } else {
@@ -29,8 +25,8 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "bhshep@telkomsa.net";
-$Subject = "Stock-Sale Calculator";
+$EmailTo = "yourname@domain.com";
+$Subject = "New message from Leno landing page";
 
 // prepare email body text
 $Body = "";
